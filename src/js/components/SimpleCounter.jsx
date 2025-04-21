@@ -13,10 +13,10 @@ function SimpleCounter({ numberSix,numberFive,numberFour, numberThree, numberTwo
             <div className="three">{numberThree % 10}</div>
             <div className="two">{numberTwo% 10}</div>
             <div className="one">{numberOne % 10}</div>
-            <div className="btn-group d-flex justify-content-center col-4" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary">Pausar</button>
-                <button type="button" class="btn btn-primary">Reiniciar</button>
-                <button type="button" class="btn btn-primary">Resumir</button>
+            <div className="btn-group  d-flex justify-content-center" role="group" aria-label="Basic mixed styles example">
+                <button type="button" className="btn btn-danger">Left</button>
+                <button type="button" className="btn btn-warning">Middle</button>
+                <button type="button" className="btn btn-success">Right</button>
             </div>
         </div>
     );
