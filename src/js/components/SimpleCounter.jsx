@@ -2,7 +2,7 @@ import React from 'react';
 import { CiClock2 } from "react-icons/ci";
 
 function SimpleCounter({ numberSix,numberFive,numberFour, numberThree, numberTwo,
-     numberOne,pauseCounter,continueCounter,resetCounter,reduceCounter,insertTime}) {
+     numberOne,pauseCounter,continueCounter,resetCounter,reduceCounter}) {
     return (
         <>
         <div className="counter ">
@@ -20,10 +20,15 @@ function SimpleCounter({ numberSix,numberFive,numberFour, numberThree, numberTwo
                 <button onClick={continueCounter} type="button" className="btn btn-warning mx-2">Reanudar</button>
                 <button onClick= {resetCounter} type="button" className="btn btn-success mx-2">Reiniciar</button>
                 <button onClick={reduceCounter}  type="button" className="btn btn-primary mx-2">Decremento</button>
-                
+                <div className="row">
+                   <input className="form-control mt-2" type="text" placeholder="Introduzca número"  aria-label="number"/>
+                </div>
+
             </div>
+           
             
         </div>
+        
             
               
           
