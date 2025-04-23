@@ -15,14 +15,22 @@ let counter = 0;
 let control;
 let number = 985675;
 let contadorDown = false;
+let numberStop = 0;
 
 
 
+const numberForStopCounter = () => {
+  const input = prompt("introduce un numero");
+  const newNumber = parseInt(input);
+  numberStop = newNumber;
+  return (numberStop);
+}
 
 
-function timeControl() {
 
- 
+const timeControl = () => {
+
+
   //const valorIntroducido = document.querySelector('input[aria-label="number"]')?.value;
   //const numberStop = parseInt(valorIntroducido);
 
@@ -35,9 +43,11 @@ function timeControl() {
     } else {
       counter--;
     }
-   // if (counter === numberStop) {
-     // alert(`¡Has llegado al tiempo ${numberStop}!`);
-    //}
+    if (counter === numberStop) {
+
+      alert(`¡Has llegado al tiempo ${numberStop}!`);
+      
+    }
 
 
 
@@ -50,7 +60,7 @@ function timeControl() {
     const squareOne = Math.floor(counter / 1);
 
 
-    
+
 
     ReactDOM.createRoot(document.getElementById('root')).render(
       <React.StrictMode>
@@ -68,15 +78,16 @@ function timeControl() {
           resetCounter={() => {
             counter = 0;
             clearInterval(control);
-            contadorDown=false;
+            contadorDown = false;
             timeControl();
           }}
           reduceCounter={() => {
             clearInterval(control)
             counter = number;
-            contadorDown=true;
+            contadorDown = true;
             timeControl();
           }}
+          activatePromp={numberForStopCounter}
         />
       </React.StrictMode>,
     );
